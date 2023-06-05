@@ -17,9 +17,9 @@ app.use(
 const io = new Server(httpServer, {
 	cors: {
 		origin: process.env.APP_URL,
-		credentials: false
-	},
-	transports: ['websocket']
+		credentials: false,
+		transports: ['websocket']
+	}
 });
 
 io.on('connection', (socket) => {
